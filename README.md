@@ -3,7 +3,7 @@
 ## 1. Método
 
 ### Equipamento utilizado:
-- **Processador:** AMD64 Family 23 Model 8 Stepping 2, AuthenticAMD
+- **Processador:** AMD64 Ryzen 7 2700
 - **Memória RAM:** 32.00 GB
 - **Placa de Vídeo:** NVIDIA GeForce RTX 4060, 8188 MB
 
@@ -26,7 +26,7 @@
 
 ## 2. Resultados detalhados
 
-###Visualização Inicial dos Vetores:
+### Visualização Inicial dos Vetores:
 
 ![Vetores](/img/vetores_ordem_grafico.png)
 
