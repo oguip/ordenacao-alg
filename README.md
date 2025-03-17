@@ -30,7 +30,17 @@ Os tempos completos estão registrados abaixo na tabela:
 
 ### Tabela Completa dos Resultados
 
-[Veja aqui a tabela completa](sandbox:/mnt/data/tabela_resultados.md)
+|   Tamanho | Tipo        |   Bubble Sort |   Bubble Sort Otimizado |   Insertion Sort |   MergeSort |   QuickSort |   Selection Sort |
+|----------:|:------------|--------------:|------------------------:|-----------------:|------------:|------------:|-----------------:|
+|      1000 | aleatório   |      0.249316 |             0.270488    |       0.101423   |  0.00709534 |  0.00151134 |         0.124209 |
+|      1000 | crescente   |      0.155347 |             0.000504732 |       0          |  0.00614738 |  0.00151515 |         0.117388 |
+|      1000 | decrescente |      0.439005 |             0.447778    |       0.217992   |  0.00473094 |  0.00151944 |         0.142225 |
+|     10000 | aleatório   |     25.9654   |            27.7966      |      10.3539     |  0.0814061  |  0.0344474  |        12.8204   |
+|     10000 | crescente   |     13.323    |             0.00166535  |       0.00409436 |  0.0734565  |  0.0353377  |        11.7526   |
+|     10000 | decrescente |     38.8383   |            40.554       |      19.6416     |  0.0679412  |  0.0292578  |        11.4662   |
+|    100000 | aleatório   |   2685.24     |          2675.78        |     967.77       |  0.907064   |  0.424003   |      1152.54     |
+|    100000 | crescente   |   1226.25     |             0.0253668   |       0.0421722  |  0.804406   |  0.291706   |      1126.49     |
+|    100000 | decrescente |   3794.66     |          4008.88        |    1974.53       |  0.85815    |  0.319554   |      1152.9      |
 
 ### Gráficos ilustrando diferenças de desempenho (com marcação dos valores):
 
