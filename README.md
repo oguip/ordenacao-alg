@@ -1,5 +1,8 @@
 # Relatório sobre Eficiência de Algoritmos de Ordenação
 
+## Guilherme de Oliveira Pereira
+## 10390535
+
 ## 1. Método
 
 ### Equipamento utilizado:
@@ -30,7 +33,82 @@
 
 ![Vetores](/img/vetores_ordem_grafico.png)
 
-Os tempos completos estão registrados abaixo na tabela:
+### Implementação dos algoritmos de ordenação
+
+```py
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+
+def bubble_sort_otimizado(arr):
+    n = len(arr)
+    for i in range(n):
+        trocado = False
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+                trocado = True
+        if not trocado:
+            break
+
+def selection_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        min_idx = i
+        for j in range(i+1, n):
+            if arr[j] < arr[min_idx]:
+                min_idx = j
+        arr[i], arr[min_idx] = arr[min_idx], arr[i]
+
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        chave = arr[i]
+        j = i-1
+        while j >=0 and chave < arr[j]:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = chave
+
+def merge_sort(arr):
+    if len(arr) > 1:
+        meio = len(arr)//2
+        L = arr[:meio]
+        R = arr[meio:]
+        merge_sort(L)
+        merge_sort(R)
+        i = j = k = 0
+        while i < len(L) and j < len(R):
+            if L[i] < R[j]:
+                arr[k] = L[i]
+                i += 1
+            else:
+                arr[k] = R[j]
+                j += 1
+            k += 1
+        while i < len(L):
+            arr[k] = L[i]
+            i += 1
+            k += 1
+        while j < len(R):
+            arr[k] = R[j]
+            j += 1
+            k += 1
+
+def quick_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    else:
+        pivot = arr[len(arr) // 2]
+        esquerda = [x for x in arr if x < pivot]
+        meio = [x for x in arr if x == pivot]
+        direita = [x for x in arr if x > pivot]
+        return quick_sort(esquerda) + meio + quick_sort(direita)
+```
+
+Os tempos em segundos estão registrados abaixo na tabela:
 
 ### Tabela Completa dos Resultados
 
@@ -70,7 +148,7 @@ Os tempos completos estão registrados abaixo na tabela:
 
 ## 4. Análise Crítica sobre Análise Assintótica vs Tempos Obtidos
 
-- Os algoritmos com complexidade **O(n²)** (Bubble Sort, Selection Sort, Insertion Sort) apresentaram tempos exponencialmente maiores com o crescimento dos vetores, o que está alinhado diretamente com a teoria de análise assintótica.
+- Os algoritmos com complexidade **O(n²)** (Bubble Sort, Selection Sort, Insertion Sort) apresentaram tempos exponencialmente maiores com o crescimento dos vetores, o que está alinhado diretamente com a teoria de análise assintótica. Nota-se que o QuickSort tem como pior caso **O(n²)**, porém, apenas ocorre quando o pivô escolhido seja o menor ou maior elemento do vetor.
 - **MergeSort** e **QuickSort**, ambos com complexidade média **O(n log n)**, confirmaram a teoria, exibindo tempos relativamente curtos e aumento menos pronunciado conforme o crescimento da massa de dados.
 - A análise experimental valida completamente a teoria de eficiência assintótica, recomendando claramente o uso de algoritmos como MergeSort e QuickSort para situações práticas com grandes conjuntos de dados.
 
