@@ -7,7 +7,7 @@
 
 ### Equipamento utilizado:
 - **Processador:** AMD64 Ryzen 7 2700
-- **Memória RAM:** 32.00 GB
+- **Memória RAM:** 32.00 GB DDR4 3200MHz
 - **Placa de Vídeo:** NVIDIA GeForce RTX 4060, 8188 MB
 
 ### Massa de dados:
@@ -123,6 +123,8 @@ Os tempos em segundos estão registrados abaixo na tabela:
 |    100000 | aleatório   |   2685.24     |          2675.78        |      1152.54     |     967.77       |  0.907064   |  0.424003   |
 |    100000 | crescente   |   1226.25     |             0.0253668   |      1126.49     |       0.0421722  |  0.804406   |  0.291706   |
 |    100000 | decrescente |   3794.66     |          4008.88        |      1152.9      |    1974.53       |  0.85815    |  0.319554   |
+
+Tempo total: 20.983 segundos - 349 minutos - 5.8 horas
 
 ### Gráficos ilustrando diferenças de desempenho (com marcação dos valores):
 
