@@ -1,7 +1,7 @@
 # Relatório sobre Eficiência de Algoritmos de Ordenação
 
-## Guilherme de Oliveira Pereira
-## 10390535
+### Guilherme de Oliveira Pereira
+### 10390535
 
 ## 1. Método
 
