@@ -29,6 +29,17 @@
 
 ## 2. Resultados detalhados
 
+### Criação dos vetores utilizando numpy
+
+```py
+vetores = {}
+for tamanho in tamanhos:
+    vetores[tamanho] = {}
+    vetores[tamanho]['aleatório'] = np.random.randint(0, tamanho, tamanho)
+    vetores[tamanho]['crescente'] = np.arange(tamanho)
+    vetores[tamanho]['decrescente'] = np.arange(tamanho, 0, -1)
+```
+
 ### Visualização Inicial dos Vetores:
 
 ![Vetores](/img/vetores_ordem_grafico.png)
